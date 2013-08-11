@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div id="top">
+		<ul>
+			<li><a href="proto_til.html">Tilbakemelding</a></li>
+			<li><a href="proto_opp.html">Opplysninger</a></li>
+			<li><a href="proto_spo.html">Spørsmål (valgfritt)</a></li>
+			<li><a href="proto_bek.html">Bekreftelse</a></li>
+		</ul>
+	</div>
+	
+	<div id="body">
+		<p>Hvem er du?</p>
+		<input type="radio">Pasient</input>
+		<input type="radio">Kvinne</input><br />
+		<input type="radio">Pårørende</input>	
+		<input type="radio">Mann</input><br />
+	
+		<p>Om sykehusbesøket</p>
+		<select>
+			<option>Varighet på opphold...</option>
+			<option>2-7 dager</option>
+			<option>1-2 uker</option>
+			<option>3-4 uker</option>
+			<option>1-2 mnd</option>
+			<option>2-4 mnd</option>
+			<option>Mer enn 4 mnd</option>
+			<option>Vet ikke / Ønsker ikke oppgi</option>
+		</select>
+		
+		<br />
+		
+		<select>
+			<option>Velg behandling...</option>
+			<option>Barn (0-18 år)</option>
+			<option>Kirurgi / Operasjon</option>
+			<option>Medisin</option>
+			<option>Poliklinikk</option>
+			<option>Psykiatri & rus</option>
+			<option>Vet ikke / Ønsker ikke oppgi</option>
+		</select>
+		
+		<br />
+		
+		<select>
+			<option>Velg avdeling...</option>
+		</select>
+	</div>
+</body>
+</html>

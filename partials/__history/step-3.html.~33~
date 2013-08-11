@@ -1,0 +1,278 @@
+<!-- Overskrift radios -->
+<div class="row">
+	<div class="col-12">
+		<h3>Generell tilfredshet ved UNN Tromsø</h3>
+	</div>
+</div>
+
+<!-- Spørsmål 1 -->
+<div class="row">
+	<div class="col-12">
+		<table class="table table-striped">
+			<colgroup>
+				<col />
+				<col width="80px" />
+				<col width="80px" />
+				<col width="80px" />
+				<col width="80px" />
+				<col width="80px" />
+			</colgroup>
+			<thead>
+				<tr>
+					<th></th>
+					<th>Ikke noe tilfreds</th>
+					<th>Lite tilfreds</th>
+					<th>Noe tilfreds</th>
+					<th>Tilfreds</th>
+					<th>Meget tilfreds</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1. Alt i alt, hvor tilfreds er du med oppholdet du har hatt på UNN?</td>
+					<td>
+						<input type="radio" name="row0" value="1" ng-model="data.tilfredshet[0]" />
+					</td>
+					<td>
+						<input type="radio" name="row0" value="2" ng-model="data.tilfredshet[0]" />
+					</td>
+					<td>
+						<input type="radio" name="row0" value="3" ng-model="data.tilfredshet[0]" />
+					</td>
+					<td>
+						<input type="radio" name="row0" value="4" ng-model="data.tilfredshet[0]" />
+					</td>
+					<td>
+						<input type="radio" name="row0" value="5" ng-model="data.tilfredshet[0]" />
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<!-- Overskrift radios -->
+<div class="row">
+	<div class="col-12">
+		<h3>Generell tilfredshet ved UNN Tromsø</h3>
+	</div>
+</div>
+
+<!-- Spørsmål 2-11 -->
+<div class="row">
+	<div class="col-12">
+		<table class="table table-striped">
+			<colgroup>
+				<col />
+				<col width="80px" />
+				<col width="80px" />
+				<col width="80px" />
+				<col width="80px" />
+				<col width="80px" />
+			</colgroup>
+			<thead>
+				<tr>
+					<th></th>
+					<th>Ikke noe tilfreds</th>
+					<th>Lite tilfreds</th>
+					<th>Noe tilfreds</th>
+					<th>Tilfreds</th>
+					<th>Meget tilfreds</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>2. Fikk du tilstrekkelig informasjon i forkant av dagoppholdet/timen?</td>
+					<td>
+						<input type="radio" name="row1" value="1" ng-model="data.tilfredshet[1]" />
+					</td>
+					<td>
+						<input type="radio" name="row1" value="2" ng-model="data.tilfredshet[1]" />
+					</td>
+					<td>
+						<input type="radio" name="row1" value="3" ng-model="data.tilfredshet[1]" />
+					</td>
+					<td>
+						<input type="radio" name="row1" value="4" ng-model="data.tilfredshet[1]" />
+					</td>
+					<td>
+						<input type="radio" name="row1" value="5" ng-model="data.tilfredshet[1]" />
+					</td>
+				</tr>
+				<tr>
+					<td>3. Ble du tatt godt imot av personalet på sykehuset?</td>
+					<td>
+						<input type="radio" name="row2" value="1" ng-model="data.tilfredshet[2]" />
+					</td>
+					<td>
+						<input type="radio" name="row2" value="2" ng-model="data.tilfredshet[2]" />
+					</td>
+					<td>
+						<input type="radio" name="row2" value="3" ng-model="data.tilfredshet[2]" />
+					</td>
+					<td>
+						<input type="radio" name="row2" value="4" ng-model="data.tilfredshet[2]" />
+					</td>
+					<td>
+						<input type="radio" name="row2" value="5" ng-model="data.tilfredshet[2]" />
+					</td>
+				</tr>
+				<tr>
+					<td>4. Snakket behandlerne til deg slik at du forsto dem?</td>
+					<td>
+						<input type="radio" name="row3" value="1" ng-model="data.tilfredshet[3]" />
+					</td>
+					<td>
+						<input type="radio" name="row3" value="2" ng-model="data.tilfredshet[3]" />
+					</td>
+					<td>
+						<input type="radio" name="row3" value="3" ng-model="data.tilfredshet[3]" />
+					</td>
+					<td>
+						<input type="radio" name="row3" value="4" ng-model="data.tilfredshet[3]" />
+					</td>
+					<td>
+						<input type="radio" name="row3" value="5" ng-model="data.tilfredshet[3]" />
+					</td>
+				</tr>
+				<tr>
+					<td>5. Har du tillit til behandlernes faglige dyktighet?</td>
+					<td>
+						<input type="radio" name="row4" value="1" ng-model="data.tilfredshet[4]" />
+					</td>
+					<td>
+						<input type="radio" name="row4" value="2" ng-model="data.tilfredshet[4]" />
+					</td>
+					<td>
+						<input type="radio" name="row4" value="3" ng-model="data.tilfredshet[4]" />
+					</td>
+					<td>
+						<input type="radio" name="row4" value="4" ng-model="data.tilfredshet[4]" />
+					</td>
+					<td>
+						<input type="radio" name="row4" value="5" ng-model="data.tilfredshet[4]" />
+					</td>
+				</tr>
+				<tr>
+					<td>6. Fikk du vite det du syntes var nødvendig om hvordan prøver, tester eller undersøkelser skulle foregå?</td>
+					<td>
+						<input type="radio" name="row5" value="1" ng-model="data.tilfredshet[5]" />
+					</td>
+					<td>
+						<input type="radio" name="row5" value="2" ng-model="data.tilfredshet[5]" />
+					</td>
+					<td>
+						<input type="radio" name="row5" value="3" ng-model="data.tilfredshet[5]" />
+					</td>
+					<td>
+						<input type="radio" name="row5" value="4" ng-model="data.tilfredshet[5]" />
+					</td>
+					<td>
+						<input type="radio" name="row5" value="5" ng-model="data.tilfredshet[5]" />
+					</td>
+				</tr>
+				<tr>
+					<td>7. Fikk du tilstrekkelig informasjon om din diagnose /dine plager?</td>
+					<td>
+						<input type="radio" name="row6" value="1" ng-model="data.tilfredshet[6]" />
+					</td>
+					<td>
+						<input type="radio" name="row6" value="2" ng-model="data.tilfredshet[6]" />
+					</td>
+					<td>
+						<input type="radio" name="row6" value="3" ng-model="data.tilfredshet[6]" />
+					</td>
+					<td>
+						<input type="radio" name="row6" value="4" ng-model="data.tilfredshet[6]" />
+					</td>
+					<td>
+						<input type="radio" name="row6" value="5" ng-model="data.tilfredshet[6]" />
+					</td>
+				</tr>
+				<tr>
+					<td>8. Opplevde du at behandlingen var tilpasset din situasjon?</td>
+					<td>
+						<input type="radio" name="row7" value="1" ng-model="data.tilfredshet[7]" />
+					</td>
+					<td>
+						<input type="radio" name="row7" value="2" ng-model="data.tilfredshet[7]" />
+					</td>
+					<td>
+						<input type="radio" name="row7" value="3" ng-model="data.tilfredshet[7]" />
+					</td>
+					<td>
+						<input type="radio" name="row7" value="4" ng-model="data.tilfredshet[7]" />
+					</td>
+					<td>
+						<input type="radio" name="row7" value="5" ng-model="data.tilfredshet[7]" />
+					</td>
+				</tr>
+				<tr>
+					<td>9. Var du involvert i avgjørelser som angikk din behandling?</td>
+					<td>
+						<input type="radio" name="row8" value="1" ng-model="data.tilfredshet[8]" />
+					</td>
+					<td>
+						<input type="radio" name="row8" value="2" ng-model="data.tilfredshet[8]" />
+					</td>
+					<td>
+						<input type="radio" name="row8" value="3" ng-model="data.tilfredshet[8]" />
+					</td>
+					<td>
+						<input type="radio" name="row8" value="4" ng-model="data.tilfredshet[8]" />
+					</td>
+					<td>
+						<input type="radio" name="row8" value="5" ng-model="data.tilfredshet[8]" />
+					</td>
+				</tr>
+				<tr>
+					<td>10. Opplevde du at arbeidet på UNN var godt organisert?</td>
+					<td>
+						<input type="radio" name="row9" value="1" ng-model="data.tilfredshet[9]" />
+					</td>
+					<td>
+						<input type="radio" name="row9" value="2" ng-model="data.tilfredshet[9]" />
+					</td>
+					<td>
+						<input type="radio" name="row9" value="3" ng-model="data.tilfredshet[9]" />
+					</td>
+					<td>
+						<input type="radio" name="row9" value="4" ng-model="data.tilfredshet[9]" />
+					</td>
+					<td>
+						<input type="radio" name="row9" value="5" ng-model="data.tilfredshet[9]" />
+					</td>
+				</tr>
+				<tr>
+					<td>11. Fikk du intrykk av at UNNs utstyr var i god stand?</td>
+					<td>
+						<input type="radio" name="row10" value="1" ng-model="data.tilfredshet[10]" />
+					</td>
+					<td>
+						<input type="radio" name="row10" value="2" ng-model="data.tilfredshet[10]" />
+					</td>
+					<td>
+						<input type="radio" name="row10" value="3" ng-model="data.tilfredshet[10]" />
+					</td>
+					<td>
+						<input type="radio" name="row10" value="4" ng-model="data.tilfredshet[10]" />
+					</td>
+					<td>
+						<input type="radio" name="row10" value="5" ng-model="data.tilfredshet[10]" />
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<!-- Buttons row -->
+<div class="row">
+	<div class="col-6">
+		<a href="#" ng-href="#/step-2" class="btn btn-default">Tilbake</a>	
+	</div>
+			
+	<div class="col-6">
+		<button type="button" class="btn btn-default pull-right" ng-click="save">Send</button>
+	</div>
+</div>
