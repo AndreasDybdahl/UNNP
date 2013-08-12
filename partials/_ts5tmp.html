@@ -1,79 +1,38 @@
-<!-- Overskrift forms -->
+<!-- Forms row -->	
 <div class="row">
 	<div class="col-12">
-		<h3>Hvem er du?</h3>
-	</div>
-</div>
-
-<!-- Forms row -->
-<div class="row">
-	<div class="col-6">
 		<div class="form-group">
-			<div class="radio">
-				<label>
-					<input type="radio" name="optionsRadios1" value="patient" ng-model="data.status" />
-					Pasient
-				</label>
-			</div>
+			<label for="tilbakemelding">Tilbakemeldingen gjelder:</label>
+			<select class="form-control" id="tilbakemelding" ng-model="data.emne" ng-options="e for e in emner">
+				<option value="" ng-show="!data.emne">Velg emne...</option>
+			</select>
+		</div>
+				
+		<div class="form-group">
+			<label for="tilbakemeldingarea">Skriv din tilbakemelding her:</label>
+			<span class="pull-right text-muted">{{ledig}} tegn igjen</span>
+			<textarea id="tilbakemeldingarea" class="form-control" rows="6" ng-model="data.tilbakemelding"></textarea>
+			<span class="text-muted">NB! Vennligst ikke oppgi sensitiv informasjon. Vi ber også om at enkeltpersoners ikke
+				omtales med navn. Meldinger med slikt innhold vil ikke publiseres.<a href="#">Les mer</a>.</span>
 		</div>
 				
 		<div class="form-group">
 			<div class="radio">
 				<label>
-					<input type="radio" name="optionsRadios1" value="family" ng-model="data.status" />
-					Pårørende
-				</label>
-			</div>
-		</div>
-	</div>
-	
-	<div class="col-6">
-		<div class="form-group">
-			<div class="radio">
-				<label>
-					<input type="radio" name="optionsRadios2" value="male" ng-model="data.gender" />
-					Mann
+					<input type="radio" name="optionsRadios" value="true" ng-model="data.feedback" />
+					Ja, jeg ønsker at meldingen skal bli publisert på www.unn.no/ping, slik at andre pasienter og pårørende kan lese den.
 				</label>
 			</div>
 		</div>
 				
 		<div class="form-group">
-			<div class="radio">
+				<div class="radio">
 				<label>
-					<input type="radio" name="optionsRadios2" value="female" ng-model="data.gender" />
-					Kvinne
+					<input type="radio" name="optionsRadios" value="false" ng-model="data.feedback" />
+					Nei, jeg ønsker <strong>ikke</strong> at meldingen skal bli publisert på www.unn.no/ping. Kun personalet ved 
+					UNN får tilgang til innholdet.
 				</label>
 			</div>
-		</div>
-	</div>
-</div>
-
-<!-- Overskrift forms -->
-<div class="row">
-	<div class="col-12">
-		<h3>Om sykehusbesøket</h3>
-	</div>
-</div>
-
-<!-- Forms row -->
-<div class="row">
-	<div class="col-12">
-		<div class="form-group">
-			<select class="form-control" id="tilbakemelding" ng-model="data.opphold" ng-options="o for o in oppholdsvarighet">
-				<option value="" ng-show="!data.opphold">Varighet på opphold...</option>
-			</select>
-		</div>
-		
-		<div class="form-group">
-			<select class="form-control" id="tilbakemelding" ng-model="data.behandling" ng-options="o for o in behandlinger">
-				<option value="" ng-show="!data.behandling">Velg behandling...</option>
-			</select>
-		</div>
-		
-		<div class="form-group">
-			<select class="form-control" id="tilbakemelding" ng-model="data.avdeling" ng-options="o for o in avdelinger" ng-disabled="disableAvdeling">
-				<option value="" ng-show="!data.avdeling">Velg avdeling...</option>
-			</select>
 		</div>
 	</div>
 </div>
@@ -81,16 +40,16 @@
 <!-- Buttons row -->
 <div class="row">
 	<div class="col-4">
-		<a href="#" ng-href="#/step-1" class="btn btn-default">Tilbake</a>	
+		<button type="button" class="btn btn-default" disabled="disabled">Tilbake</button>	
 	</div>
 	
 	<div class="col-4">
 		<div class="progress">
-			<div class="progress-bar" style="width: 66%;"></div>
+			<div class="progress-bar" style="width: 33%;"></div>
 		</div>
 	</div>
-			
+		
 	<div class="col-4">
-		<a href="#" ng-href="#/step-3" class="btn btn-default pull-right">Neste</a>
+		<a href="#" ng-href="#/step-2" class="btn btn-default pull-right">Neste</a>
 	</div>
 </div>
