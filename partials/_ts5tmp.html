@@ -1,19 +1,96 @@
+<!-- Overskrift forms -->
 <div class="row">
 	<div class="col-12">
-		<h3>Takk for din tilbakemelding!</h3>
-		<p>Meldingen din vil nå bli lest av vår tilbakemeldingsbehandler før den kan bli publisert på nettsidene.</p>
+		<h3>Hvem er du?</h3>
 	</div>
 </div>
 
+<!-- Forms row -->
 <div class="row">
-	<div class="col-12">
-		<h3>Hva vil du gjøre nå?</h3>
-		<p>Se hva andre har sagt!<a href="javascript:;">Til fortellinger</a></p>
+	<div class="col-6">
+		<div class="form-group">
+			<div class="radio">
+				<label>
+					<input type="radio" name="optionsRadios1" value="patient" ng-model="data.status" />
+					Pasient
+				</label>
+			</div>
+		</div>
+				
+		<div class="form-group">
+			<div class="radio">
+				<label>
+					<input type="radio" name="optionsRadios1" value="family" ng-model="data.status" />
+					Pårørende
+				</label>
+			</div>
+		</div>
+	</div>
+	
+	<div class="col-6">
+		<div class="form-group">
+			<div class="radio">
+				<label>
+					<input type="radio" name="optionsRadios2" value="male" ng-model="data.gender" />
+					Mann
+				</label>
+			</div>
+		</div>
+				
+		<div class="form-group">
+			<div class="radio">
+				<label>
+					<input type="radio" name="optionsRadios2" value="female" ng-model="data.gender" />
+					Kvinne
+				</label>
+			</div>
+		</div>
 	</div>
 </div>
 
+<!-- Overskrift forms -->
 <div class="row">
-	<div class="col-12" style="text-align: center;">
-		<a href="javascript:;">Til hovedside</a>
+	<div class="col-12">
+		<h3>Om sykehusbesøket</h3>
+	</div>
+</div>
+
+<!-- Forms row -->
+<div class="row">
+	<div class="col-12">
+		<div class="form-group">
+			<select class="form-control" id="tilbakemelding" ng-model="data.opphold" ng-options="o for o in oppholdsvarighet">
+				<option value="" ng-show="!data.opphold">Varighet på opphold...</option>
+			</select>
+		</div>
+		
+		<div class="form-group">
+			<select class="form-control" id="tilbakemelding" ng-model="data.behandling" ng-options="o for o in behandlinger">
+				<option value="" ng-show="!data.behandling">Velg behandling...</option>
+			</select>
+		</div>
+		
+		<div class="form-group">
+			<select class="form-control" id="tilbakemelding" ng-model="data.avdeling" ng-options="o for o in avdelinger" ng-disabled="disableAvdeling">
+				<option value="" ng-show="!data.avdeling">Velg avdeling...</option>
+			</select>
+		</div>
+	</div>
+</div>
+
+<!-- Buttons row -->
+<div class="row">
+	<div class="col-4">
+		<a href="#" ng-href="#/step-1" class="btn btn-default">Tilbake</a>	
+	</div>
+	
+	<div class="col-4">
+		<div class="progress">
+			<div class="progress-bar" style="width: 66%;"></div>
+		</div>
+	</div>
+			
+	<div class="col-4">
+		<a href="#" ng-href="#/step-3" class="btn btn-default pull-right">Neste</a>
 	</div>
 </div>
