@@ -55,7 +55,7 @@
 <div class="row">
   <div class="col-6">
     <div class="form-group">
-      <input id="tema" type="text" class="form-control" placeholder="Skriv ditt tema her" ng-model="prepData.temadata[10]">
+      <input id="tema" type="text" class="form-control" placeholder="Skriv ditt tema her" ng-model="prepData.temadata[{{number}}]">
     </div>
   </div>
 </div>
@@ -63,7 +63,7 @@
 <div class="row">
   <div class="col-6">
     <div class="form-group">
-      <textarea id="tematekst" class="form-control" rows="4" placeholder="Beskriv ditt tema her" ng-model="prepData.temadata[11]"></textarea> 
+      <textarea id="tematekst" class="form-control" rows="4" placeholder="Beskriv ditt tema her" ng-model="prepData.temadata[{{number+1}}]"></textarea> 
     </div>
   </div>
 </div>
