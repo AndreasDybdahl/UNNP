@@ -55,7 +55,7 @@
 <div class="row">
   <div class="col-6">
     <div class="form-group">
-      <input id="tema" type="text" class="form-control" placeholder="Skriv ditt tema her" ng-model="prepData.temadata[{{number}}]">
+      <input id="tema" type="text" class="form-control" placeholder="Skriv ditt tema her" ng-model="temaTittel" ng-disabled="prepData.temadata.length > 5">
     </div>
   </div>
 </div>
@@ -63,18 +63,41 @@
 <div class="row">
   <div class="col-6">
     <div class="form-group">
-      <textarea id="tematekst" class="form-control" rows="4" placeholder="Beskriv ditt tema her" ng-model="prepData.temadata[{{number+1}}]"></textarea> 
+      <textarea id="tematekst" class="form-control" rows="4" placeholder="Beskriv ditt tema her" ng-model="temaTekst" ng-disabled="prepData.temadata.length > 5"></textarea> 
     </div>
   </div>
 </div>
 
 <div class="row">
   <div class="col-12">
-    <button type="button" class="btn btn-primary" ng-click="add()">Legg til tema</button>
+    <button type="button" class="btn btn-primary" ng-click="add()" ng-disabled="!temaTittel.length || !temaTekst.length || prepData.temadata.length > 5">Legg tema til</button>
   </div>
 </div>
 
-<br>
+<div class="row">
+  <div class="col-12">
+    <div class="panel panel-default" style="margin-top: 10px;" ng-hide="!prepData.temadata.length">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Tema</th>
+            <th>Tekst</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="tema in prepData.temadata">
+            <td>{{tema.tittel}}</td>
+            <td>{{tema.tekst}}</td>
+            <td><button type="button" class="btn btn-danger pull-right" ng-click="remove($index)">Slett</button></td>
+          </tr>
+        </tbody>  
+      </table>
+    </div>
+  </div>
+</div>
+
+<br />
 
 <div class="row">
   <div class="col-12">
