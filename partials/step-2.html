@@ -4,7 +4,7 @@
 		<ul class="nav navbar-nav">
 			<li ng-class="isStep(1)"><a href="javascript:;">Tilbakemelding</a></li>
 			<li ng-class="isStep(2)"><a href="javascript:;">Opplysninger</a></li>
-			<li ng-class="isStep(3)"><a href="javascript:;">Spørsmål (valgfritt)</a></li>
+			<li ng-class="isStep(3)"><a href="javascript:;">Spørsmål</a></li>
 			<li ng-class="isStep(4)"><a href="javascript:;">Bekreftelse</a></li>
 		</ul>
 	</div>
@@ -23,7 +23,7 @@
 		<div class="form-group">
 			<div class="radio">
 				<label>
-					<input type="radio" name="optionsRadios1" value="patient" ng-model="data.status" />
+					<input type="radio" name="optionsRadios1" value="patient" ng-model="feedbackData.status" />
 					Pasient
 				</label>
 			</div>
@@ -32,7 +32,7 @@
 		<div class="form-group">
 			<div class="radio">
 				<label>
-					<input type="radio" name="optionsRadios1" value="family" ng-model="data.status" />
+					<input type="radio" name="optionsRadios1" value="family" ng-model="feedbackData.status" />
 					Pårørende
 				</label>
 			</div>
@@ -43,7 +43,7 @@
 		<div class="form-group">
 			<div class="radio">
 				<label>
-					<input type="radio" name="optionsRadios2" value="male" ng-model="data.gender" />
+					<input type="radio" name="optionsRadios2" value="male" ng-model="feedbackData.gender" />
 					Mann
 				</label>
 			</div>
@@ -52,7 +52,7 @@
 		<div class="form-group">
 			<div class="radio">
 				<label>
-					<input type="radio" name="optionsRadios2" value="female" ng-model="data.gender" />
+					<input type="radio" name="optionsRadios2" value="female" ng-model="feedbackData.gender" />
 					Kvinne
 				</label>
 			</div>
@@ -71,20 +71,20 @@
 <div class="row">
 	<div class="col-12">
 		<div class="form-group">
-			<select class="form-control" id="tilbakemelding" ng-model="data.opphold" ng-options="o for o in oppholdsvarighet">
-				<option value="" ng-show="!data.opphold">Varighet på opphold...</option>
+			<select class="form-control" id="tilbakemelding" ng-model="feedbackData.opphold" ng-options="o for o in oppholdsvarighet">
+				<option value="" ng-show="!feedbackData.opphold">Varighet på opphold...</option>
 			</select>
 		</div>
 		
 		<div class="form-group">
-			<select class="form-control" id="tilbakemelding" ng-model="data.behandling" ng-options="o for o in behandlinger">
-				<option value="" ng-show="!data.behandling">Velg behandling...</option>
+			<select class="form-control" id="tilbakemelding" ng-model="feedbackData.behandling" ng-options="o for o in behandlinger">
+				<option value="" ng-show="!feedbackData.behandling">Velg behandling...</option>
 			</select>
 		</div>
 		
 		<div class="form-group">
-			<select class="form-control" id="tilbakemelding" ng-model="data.avdeling" ng-options="o for o in avdelinger" ng-disabled="disableAvdeling">
-				<option value="" ng-show="!data.avdeling">Velg avdeling...</option>
+			<select class="form-control" id="tilbakemelding" ng-model="feedbackData.avdeling" ng-options="o for o in avdelinger" ng-disabled="disableAvdeling">
+				<option value="" ng-show="!feedbackData.avdeling">Velg avdeling...</option>
 			</select>
 		</div>
 	</div>
@@ -93,7 +93,7 @@
 <!-- Buttons row -->
 <div class="row">
 	<div class="col-3">
-		<a href="#" ng-href="#/step-1" class="btn btn-default">Tilbake</a>	
+		<a href="#" ng-href="#/step-1" class="btn btn-primary">Tilbake</a>	
 	</div>
 	
 	<div class="col-6">
@@ -103,6 +103,6 @@
 	</div>
 			
 	<div class="col-3">
-		<a href="#" ng-href="#/step-3" class="btn btn-default pull-right">Neste</a>
+		<a href="#" ng-href="#/step-3" class="btn btn-primary pull-right">Neste</a>
 	</div>
 </div>

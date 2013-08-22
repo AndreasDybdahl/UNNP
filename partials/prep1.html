@@ -5,7 +5,6 @@
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 <h4 class="modal-title">Informasjon</h4>
               </div>
               <div class="modal-body">
@@ -13,8 +12,8 @@
                 <p>Ditt personvern og sikkerhet er viktig for oss. Det er lagt stor vekt på sikkerhet, og all kommunikasjon krypteres og vil kun tilgjengeliggjøres for de som har et reelt behov.</p>
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-dismiss="modal">Nei</button>
-                <button type="button" class="btn btn-success">Ja</button>
+                <a class="btn btn-danger pull-left prepModalWidth" data-dismiss="modal" href="#" ng-href="#/main">Nei</a>
+                <a class="btn btn-success pull-right prepModalWidth" data-dismiss="modal">Ja</a>
               </div>
             </div><!-- /.modal-content -->
           </div><!-- /.modal-dialog -->
@@ -23,11 +22,15 @@
 </div>
 
 <div class="row">
-	<div class="col-12">
-		<div class="page-header">
-            <h1>Registrering <small>Bakgrunnsinfo og forventninger</small></h1>
-        </div>
-	</div>
+  <div class="col-6">
+    <div class="page-header">
+      <h1>Registrering <small>Bakgrunnsinfo og forventninger</small></h1>
+    </div>
+
+    </div>
+    <div class="col-6">
+      <img src="icons/Vestre Viken.png" class="img-rounded pull-right">
+    </div>
 </div>
 
 <div class="row">
@@ -37,7 +40,7 @@
         <div class="form-group">
             <label for="beskrivelsearea">Her kan du beskrive din sykdomssituasjon med egne ord:</label>
             <span class="pull-right text-muted">{{ledig}} tegn igjen</span>
-            <textarea id="beskrivelsearea" class="form-control" rows="6" ng-model="data2.beskrivelse"></textarea>
+            <textarea id="beskrivelsearea" class="form-control" rows="6" ng-model="prepData.beskrivelse"></textarea>
         </div>
     </div>
 </div>
@@ -45,7 +48,37 @@
 <div class="row">
     <div class="col-12">
         <h3>Tema</h3>
-
         <p><strong>Her kan du beskrive de tema du vil ta opp/de forventninger du har til møtet med oss. Det er satt en begrensning på seks tema.</strong></p>
     </div>
+</div>
+
+<div class="row">
+  <div class="col-6">
+    <div class="form-group">
+      <input id="tema" type="text" class="form-control" placeholder="Skriv ditt tema her" ng-model="temp.temp[0]">
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-6">
+    <div class="form-group">
+      <textarea id="tematekst" class="form-control" rows="4" placeholder="Beskriv ditt tema her" ng-model="temp.temp[1]"></textarea> 
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12">
+    <button type="button" class="btn btn-primary" ng-click="add()">Legg til tema</button>
+  </div>
+</div>
+
+<br>
+
+<div class="row">
+  <div class="col-12">
+    <a type="button" class="btn btn-danger pull-left">Avbryt</a>
+    <button type="button" class="btn btn-success pull-right">Lagre</button>
+  </div>
 </div>
