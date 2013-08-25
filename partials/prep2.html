@@ -1,42 +1,48 @@
-<div class="row">
+<div class="row prep2Image">
     <div class="col-12">
         <img src="icons/Vestre Viken.png" class="img-rounded pull-right">
-    </div>
+    </div> 
 </div>
 
-<div class="row">
-    <div class="col-12">
-        <h3>Pasientens egenregistrerte opplysninger før konsultasjon</h3>
+<div class="well">
+    <div class="row">
+        <div class="col-12">
+            <h3>Pasientens egenregistrerte opplysninger før konsultasjon</h3>
+        </div>
     </div>
-</div>
 
-<div class="row">
-    <div class="col-12">
-        <h4>Pasientens subjektive beskrivelse</h4>
-        <p>
-            {{prepData.beskrivelse}}
-        </p>
-    </div>
-</div>
+    <br />
 
-<div class="row">
-  <div class="col-12">
-    <h4>Pasientens subjektive beskrivelse</h4>
-    <div class="panel panel-default" style="margin-top: 10px;" ng-hide="!prepData.temadata.length">
-      <table class="table">
-        <thead>
-          <tr>
-            <th>Tema</th>
-            <th>Tekst</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr ng-repeat="tema in prepData.temadata">
-            <td>{{tema.tittel}}</td>
-            <td>{{tema.tekst}}</td>
-          </tr>
-        </tbody>  
-      </table>
+    <div class="row">
+        <div class="col-12">
+            <h4>Pasientens subjektive beskrivelse</h4>
+            <p>
+                {{prepData.beskrivelse}}
+            </p>
+        </div>
     </div>
-  </div>
+
+    <br />
+
+    <div class="row">
+      <div class="col-12">
+        <h4>Tema pasienten ønsker berørt</h4>
+        <div class="panel panel-default" style="margin-top: 10px;" ng-hide="!prepData.temadata.length">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Tema</th>
+                <th>Tekst</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat="tema in prepData.temadata">
+                <td>{{tema.tittel}}</td>
+                <td>{{tema.tekst}}</td>
+              </tr>
+            </tbody>  
+          </table>
+        </div>
+      </div>
+    </div>
 </div>
