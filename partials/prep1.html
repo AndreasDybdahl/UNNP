@@ -29,7 +29,7 @@
 
     </div>
     <div class="col-6">
-      <img src="icons/Vestre Viken.png" class="img-rounded pull-right">
+      <img src="icons/Vestre Viken.png" class="img-rounded pull-right prepImageSpacing">
     </div>
 </div>
 
@@ -53,24 +53,17 @@
 </div>
 
 <div class="row">
-  <div class="col-6">
+  <div class="col-3">
     <div class="form-group">
       <input id="tema" type="text" class="form-control" placeholder="Skriv ditt tema her" ng-model="temaTittel" ng-disabled="prepData.temadata.length > 5">
     </div>
   </div>
-</div>
 
-<div class="row">
-  <div class="col-6">
+  <div class="col-9">
     <div class="form-group">
-      <textarea id="tematekst" class="form-control" rows="4" placeholder="Beskriv ditt tema her" ng-model="temaTekst" ng-disabled="prepData.temadata.length > 5"></textarea> 
+      <input id="tematekst" class="form-control" rows="4" placeholder="Beskriv ditt tema her" ng-model="temaTekst" ng-disabled="prepData.temadata.length > 5"></input> 
     </div>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-12">
-    <button type="button" class="btn btn-primary" ng-click="add()" ng-disabled="!temaTittel.length || !temaTekst.length || prepData.temadata.length > 5">Legg tema til</button>
+    <button type="button" class="btn btn-primary pull-right" ng-click="add()" ng-disabled="!temaTittel.length || !temaTekst.length || prepData.temadata.length > 5">Legg tema til</button>
   </div>
 </div>
 
